@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow-y:scroll;">
+<head>
+    <title>Front End Dev Ninja</title>
+    <base href="/">
+</head>
+<body ng-cloak layout="column">
+
+    <div ng-controller="MainCtrl as controller">
+        <md-toolbar lauout="row" class="md-whiteframe-z3 md-primary" style="position:fixed">
+            <div class="md-toolbar-tools">
+
+                <md-button class="md-fab md-primary" aria-label="Curriculum vitae" ng-click="toggleLeft()" ng-hide="isOpenLeft()">
+                    <md-icon aria-label="Menu" class="material-icons">menu</md-icon>
+                </md-button>
+
+                <h3>Front End Dev</h3>
+
+                <span flex> </span>
+
+                <div class="fabSpeedDialdemoBasicUsage" style="padding-top: 30px; position:absolute; right:0">
+                    <md-fab-speed-dial md-open="controller.isOpen" md-direction="left"
+                                       ng-class="controller.selectedMode" >
+                        <md-fab-trigger>
+                            <md-button aria-label="menu" class="md-fab md-accent">
+                                <md-icon aria-label="Menu" class="material-icons">menu</md-icon>
+                                <md-tooltip md-direction="top">Menu</md-tooltip>
+                            </md-button>
+                        </md-fab-trigger>
+                        <md-fab-actions>
+                            <md-button aria-label="About" class="md-fab md-raised" href="#section-main" du-smooth-scroll du-scrollspy>
+                                <md-tooltip md-direction="controller.tipDirection" md-visible="controller.tooltipsVisible">About</md-tooltip>
+                                <md-icon md-svg-src="img/icons/twitter.svg" aria-label="Twitter"></md-icon>
+                            </md-button>
+                            <md-button aria-label="Experience" class="md-fab md-raised" href="#section-2" du-smooth-scroll du-scrollspy>
+                                <md-tooltip md-direction="controller.tipDirection" md-visible="controller.tooltipsVisible">Experience</md-tooltip>
+                                <md-icon md-svg-src="img/icons/facebook.svg" aria-label="Facebook"></md-icon>
+                            </md-button>
+                            <md-button aria-label="Contact" class="md-fab md-raised" href="#section-3" du-smooth-scroll du-scrollspy>
+                                <md-tooltip md-direction="controller.tipDirection" md-visible="controller.tooltipsVisible">Contact</md-tooltip>
+                                <md-icon md-svg-src="img/icons/hangout.svg" aria-label="Google Hangout"></md-icon>
+                            </md-button>
+                        </md-fab-actions>
+                    </md-fab-speed-dial>
+                </div>
+
+            </div>
+
+        </md-toolbar>
+
+        <md-sidenav class="md-sidenav-left" layout="column" md-component-id="left" md-is-locked-open="false">
+            <md-toolbar layout="row">
+                <div class="md-toolbar-tools">
+                    <h4>CV</h4>
+                    <!-- flex for right alignment of the rest of items in toolbar-->
+                    <span flex> </span>
+                    <md-button class="md-raised md-accent"><md-icon class="material-icons">system_update_alt</md-icon> PDF</md-button>
+                    <md-button class="md-icon-button md-accent" ng-click="close()" aria-label="Close" layout-align="center end">
+                        <md-icon class="material-icons">arrow_back</md-icon>
+                    </md-button>
+                </div>
+            </md-toolbar>
+
+            <md-content layout-padding flex>
+                <md-subheader class="md-no-sticky">Interests</md-subheader>
+                <div style="height:800px;"></div>
+            </md-content>
+        </md-sidenav>
+
+        <md-content>
+            <div data-ng-view=""></div>
+        </md-content>
+    </div>
+
+    <script src="bundle.js"></script>
+</body>
+</html>
