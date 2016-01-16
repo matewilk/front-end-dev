@@ -6,7 +6,7 @@
 </head>
 <body ng-cloak layout="column">
 
-    <div ng-controller="MainCtrl as controller">
+    <div ng-controller="MainCtrl as controller" class="relative" layout-fill role="main">
         <md-toolbar lauout="row" class="md-whiteframe-z3 md-primary" style="position:fixed">
             <div class="md-toolbar-tools">
 
@@ -28,15 +28,15 @@
                             </md-button>
                         </md-fab-trigger>
                         <md-fab-actions>
-                            <md-button aria-label="About" class="md-fab md-raised" href="#section-main" du-smooth-scroll du-scrollspy>
+                            <md-button aria-label="About" class="md-fab md-raised" href="#section-main" du-smooth-scroll du-scrollspy offseet="70" ng-click='closeMenu()'>
                                 <md-tooltip md-direction="controller.tipDirection" md-visible="controller.tooltipsVisible">About</md-tooltip>
                                 <md-icon md-svg-src="img/icons/twitter.svg" aria-label="Twitter"></md-icon>
                             </md-button>
-                            <md-button aria-label="Experience" class="md-fab md-raised" href="#section-2" du-smooth-scroll du-scrollspy>
-                                <md-tooltip md-direction="controller.tipDirection" md-visible="controller.tooltipsVisible">Experience</md-tooltip>
+                            <md-button aria-label="Experience" class="md-fab md-raised" href="#section-2" du-smooth-scroll du-scrollspy offset="70" ng-click='closeMenu()'>
+                                <md-tooltip md-direction="top" md-visible="controller.tooltipsVisible">Experience</md-tooltip>
                                 <md-icon md-svg-src="img/icons/facebook.svg" aria-label="Facebook"></md-icon>
                             </md-button>
-                            <md-button aria-label="Contact" class="md-fab md-raised" href="#section-3" du-smooth-scroll du-scrollspy>
+                            <md-button aria-label="Contact" class="md-fab md-raised" href="#section-3" du-smooth-scroll du-scrollspy offset="70" ng-click='closeMenu()'>
                                 <md-tooltip md-direction="controller.tipDirection" md-visible="controller.tooltipsVisible">Contact</md-tooltip>
                                 <md-icon md-svg-src="img/icons/hangout.svg" aria-label="Google Hangout"></md-icon>
                             </md-button>
@@ -45,7 +45,6 @@
                 </div>
 
             </div>
-
         </md-toolbar>
 
         <md-sidenav class="md-sidenav-left" layout="column" md-component-id="left" md-is-locked-open="false">
@@ -70,6 +69,12 @@
         <md-content>
             <div data-ng-view=""></div>
         </md-content>
+
+        <footer>
+            <div layout="row" layout-align="center center">
+                <h2>My Awesome Footer</h2>
+            </div>
+        </footer>
     </div>
 
     <script src="bundle.js"></script>

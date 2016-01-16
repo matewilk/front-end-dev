@@ -47,6 +47,10 @@ module.exports = angular.module(
             }
         }
 
+        $scope.closeMenu = function () {
+            $scope.controller.isOpen = false;
+        }
+
         this.isOpen = false;
         this.availableModes = ['md-fling', 'md-scale'];
         this.selectedMode = 'md-fling';
