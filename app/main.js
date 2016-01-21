@@ -64,9 +64,23 @@ module.exports = angular.module(
                 $scope.controller.tooltipsVisible = $scope.controller.isOpen;
             }, 500);
         });
-    }
-).controller('AboutCtrl', function()
+
+        $scope.user = {
+            title: 'Senior Web Developer',
+            location: 'London',
+            company: 'BBC'
+        }
+
+        $scope.$watch('skills', function(newVal, oldVal){
+            //can't refer to the oldVal as it will create infinite loop
+            $scope.skills = {
+                javascript: 80,
+                html: 75,
+                css: 75
+            }
+        }, true);
+
+}).controller('AboutCtrl', function()
     {
 
-    }
-);
+});

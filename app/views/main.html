@@ -2,19 +2,78 @@
 
 <div layout="column" layout-align="center stretch" id="section-main" style="padding-top:10%">
     <div layout="row">
-        <md-card flex-gt-sm="66" flex-sm="100" flex-xs="100" flex-offset-gt-sm="15" class="md-whiteframe-z2" style="height: 400px; position:relative">
+        <md-card flex-gt-sm="80" flex-sm="100" flex-xs="100" flex-offset-gt-sm="10" class="md-whiteframe-z2" style="position:relative">
+            <div layout="row" layout-sm="column" layout-xs="column">
+                <div flex-gt-sm="33" flex-sm="100">
+                    <md-content layout-padding>
+                        <!-- midia query here for below div to aligh image left if not sm -->
+                        <div style="margin: 0 auto; width:150px;">
+                            <img ng-src="images/my_face.png" style="border-radius: 50%">
+                        </div>
+                    </md-content>
+                </div>
+                <div flex>
+                    <md-content layout-padding>
+                        I'm below on mobile, and to the right on larger devices.
+                    </md-content>
+                </div>
+            </div>
+
+            <div layout="row" layout-sm="column" layout-xs="column">
+                <div flex>
+                    <md-content layout-padding>
+                        <form>
+                            <md-input-container class="md-block" flex-gt-xs>
+                                <label>Current Role</label>
+                                <input ng-model="user.title" disabled>
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-xs>
+                                <label>Current Company</label>
+                                <input ng-model="user.company" disabled>
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-xs>
+                                <label>Current Location</label>
+                                <input ng-model="user.location" disabled>
+                            </md-input-container>
+                        </form>
+                    </md-content>
+                </div>
+                <div flex>
+                    <!-- media query padding-top 30px for wider than sm || align labels left for sm -->
+                    <md-content layout-padding>
+                        <div layout>
+                            <div flex-xs="20" flex-sm="15" flex-gt-sm="20" layout layout-align="start center">
+                                <span class="md-body-1">Javascript</span>
+                            </div>
+                            <md-slider flex ng-disable md-discrete min="0" step="5" max="100" ng-model="skills.javascript" aria-label="red"></md-slider>
+                        </div>
+                        <div layout>
+                            <div flex-xs="20" flex-sm="15" flex-gt-sm="20" layout layout-align="start center">
+                                <span class="md-body-1">HTML</span>
+                            </div>
+                            <md-slider flex md-discrete min="0" step="5" max="100" ng-model="skills.html" aria-label="red"></md-slider>
+                        </div>
+                        <div layout>
+                            <div flex-xs="20" flex-sm="15" flex-gt-sm="20" layout layout-align="start center">
+                                <span class="md-body-1">CSS</span>
+                            </div>
+                            <md-slider flex md-discrete min="0" step="5" max="100" ng-model="skills.css" aria-label="red"></md-slider>
+                        </div>
+                    </md-content>
+                </div>
+            </div>
 
         </md-card>
         <div flex hide-sm hide-xs></div>
     </div>
     <div layout="row">
-        <md-card id="section-2" flex-gt-sm="66" flex-sm="100" flex-xs="100" flex-offset-gt-sm="15" class="md-whiteframe-z2" style="height: 400px; position:relative">
+        <md-card id="section-2" flex-gt-sm="80" flex-sm="100" flex-xs="100" flex-offset-gt-sm="10" class="md-whiteframe-z2" style="height: 400px; position:relative">
 
         </md-card>
         <div flex hide-sm hide-xs></div>
     </div>
     <div layout="row">
-        <md-card id="section-3" flex-gt-sm="66" flex-sm="100" flex-xs="100" flex-offset-gt-sm="15" class="md-whiteframe-z2" style="height: 400px; position:relative">
+        <md-card id="section-3" flex-gt-sm="80" flex-sm="100" flex-xs="100" flex-offset-gt-sm="10" class="md-whiteframe-z2" style="height: 400px; position:relative">
 
         </md-card>
         <div flex hide-sm hide-xs></div>
