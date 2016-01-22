@@ -9,7 +9,7 @@ module.exports = angular.module(
         'ngAnimate',
         'ngMaterial',
         'ngRoute',
-        require('./core/layout')
+        require('./core/layout').name
     ]
 ).config(function ($routeProvider, $locationProvider) {
     $routeProvider
