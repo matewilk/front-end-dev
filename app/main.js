@@ -7,7 +7,9 @@ module.exports = angular.module('app',[
     'duScroll',
     'ngAnimate',
     'ngMaterial',
-    'ngRoute'
+    'ngRoute',
+    'angular-timeline',
+    'angular-scroll-animate'
 ])
 .config(function ($routeProvider, $locationProvider) {
     $routeProvider

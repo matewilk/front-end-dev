@@ -14,4 +14,9 @@ module.exports = function () {
 
     require('angular-scroll');
     require('angular-touch');
+
+    require('angular-timeline/dist/angular-timeline.js');
+    require('angular-timeline/dist/angular-timeline.scss');
+
+    require('angular-scroll-animate/dist/angular-scroll-animate');
 };
