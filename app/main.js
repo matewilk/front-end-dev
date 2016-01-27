@@ -1,7 +1,7 @@
 'use strict';
 
 import {mainController} from './controllers/MainController'
-import {speedDialMenu} from './core/components/speedDialMenu/speedDialMenu_directive'
+import {speedDialMenu} from './core/components/speedDialMenu/speedDialMenuDirective'
 
 module.exports = angular.module('app',[
     'duScroll',
@@ -14,10 +14,6 @@ module.exports = angular.module('app',[
         .when('/', {
             templateUrl: 'views/main.html',
             controller: 'MainCtrl'
-        })
-        .when('/about', {
-            templateUrl: 'views/about.html',
-            controller: 'AboutCtrl'
         })
         .otherwise({
             redirectTo: '/'

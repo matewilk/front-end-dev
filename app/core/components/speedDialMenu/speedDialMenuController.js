@@ -1,9 +1,8 @@
 'use strict';
 export function SpeedDialMenuController($scope, $timeout) {
-
     $scope.closeMenu = function () {
         $scope.controller.isOpen = false;
-    }
+    };
 
     this.isOpen = false;
     this.availableModes = ['md-fling', 'md-scale'];
@@ -18,5 +17,4 @@ export function SpeedDialMenuController($scope, $timeout) {
             $scope.controller.tooltipsVisible = $scope.controller.isOpen;
         }, 500);
     });
-
 }
