@@ -47,44 +47,44 @@ export function mainController($scope, $mdSidenav, $log, $timeout)
 
 	$scope.events = [{
 		badgeClass: 'info',
-        side: 'right',
-		badgeIconClass: 'glyphicon-check',
+        side: 'Right',
+		badgeIconClass: 'assignment_ind',
 		title: 'First heading',
 		when: '11 hours ago via Twitter',
 		content: 'Some awesome content.'
 	}, {
 		badgeClass: 'warning',
-        side: 'left',
-		badgeIconClass: 'glyphicon-credit-card',
+        side: 'Left',
+		badgeIconClass: 'place',
 		title: 'Second heading',
 		when: '12 hours ago via Twitter',
 		content: 'More awesome content.'
 	}, {
 		badgeClass: 'default',
-        side: 'right',
-		badgeIconClass: 'glyphicon-credit-card',
+        side: 'Right',
+		badgeIconClass: 'local_library',
 		title: 'Third heading',
 		titleContentHtml: '<img class="img-responsive" src="http://www.freeimages.com/assets/183333/1833326510/wood-weel-1444183-m.jpg">',
 		contentHtml: lorem,
 		footerContentHtml: '<a href="">Continue Reading</a>'
 	}, {
 		badgeClass: 'warning',
-        side: 'left',
-		badgeIconClass: 'glyphicon-credit-card',
+        side: 'Left',
+		badgeIconClass: 'event_note',
+		title: 'Second heading',
+		when: '12 hours ago via Twitter',
+		content: 'More awesome content.'
+	}, {
+		badgeClass: 'info',
+        side: 'Right',
+		badgeIconClass: 'star',
 		title: 'Second heading',
 		when: '12 hours ago via Twitter',
 		content: 'More awesome content.'
 	}, {
 		badgeClass: 'warning',
-        side: 'left',
-		badgeIconClass: 'glyphicon-credit-card',
-		title: 'Second heading',
-		when: '12 hours ago via Twitter',
-		content: 'More awesome content.'
-	}, {
-		badgeClass: 'warning',
-        side: 'left',
-		badgeIconClass: 'glyphicon-credit-card',
+        side: 'Left',
+		badgeIconClass: 'person_outline',
 		title: 'Second heading',
 		when: '12 hours ago via Twitter',
 		content: 'More awesome content.'
@@ -94,34 +94,10 @@ export function mainController($scope, $mdSidenav, $log, $timeout)
 		$scope.events.push({
 			badgeClass: 'info',
 			badgeIconClass: 'glyphicon-check',
-			title: 'First heading',
+			title: 'Dynamic heading',
 			when: '3 hours ago via Twitter',
 			content: 'Some awesome content.'
 		});
 
 	};
-	// optional: not mandatory (uses angular-scroll-animate)
-	$scope.animateElementIn = function($el) {
-		$el.removeClass('timeline-hidden');
-		$el.addClass('animated fadeInUp');
-	};
-
-	// optional: not mandatory (uses angular-scroll-animate)
-	$scope.animateElementOut = function($el) {
-		$el.addClass('timeline-hidden');
-		$el.removeClass('animated fadeInUp');
-	};
-
-	$scope.leftAlign = function() {
-		$scope.side = 'left';
-	}
-
-	$scope.rightAlign = function() {
-		$scope.side = 'right';
-	}
-
-	$scope.defaultAlign = function() {
-		$scope.side = ''; // or 'alternate'
-	}
-
 }

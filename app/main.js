@@ -9,7 +9,7 @@ module.exports = angular.module('app',[
     'ngMaterial',
     'ngRoute',
     'angular-timeline',
-    'angular-scroll-animate'
+    'angular-inview'
 ])
 .config(function ($routeProvider, $locationProvider) {
     $routeProvider

@@ -8,20 +8,8 @@
         <div flex hide-sm hide-xs></div>
     </div>
     <div layout="row">
-        <md-card id="section-2" flex-gt-sm="80" flex-sm="100" flex-xs="100" flex-offset-gt-sm="10" class="md-whiteframe-z2" style=" position:relative">
-            <timeline>
-                <timeline-node ng-repeat="event in events" side="{{event.side}}">
-                    <timeline-badge class="{{event.badgeClass}} timeline-hidden" when-visible="animateElementIn" when-not-visible="animateElementOut">
-                        <i class="glyphicon {{event.badgeIconClass}}"></i>
-                    </timeline-badge>
-                    <timeline-panel class="{{event.badgeClass}} timeline-hidden" when-visible="animateElementIn" when-not-visible="animateElementOut">
-                        <timeline-heading>
-                            <h4>{{event.title}}</h4>
-                        </timeline-heading>
-                        <p>{{event.content}}</p>
-                    </timeline-panel>
-                </timeline-node>
-            </timeline>
+        <md-card id="section-2" flex-gt-sm="80" flex-sm="100" flex-xs="100" flex-offset-gt-sm="10" class="md-whiteframe-z2" style="height: 400px;position:relative">
+
         </md-card>
         <div flex hide-sm hide-xs></div>
     </div>

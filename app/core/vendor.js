@@ -18,5 +18,5 @@ module.exports = function () {
     require('angular-timeline/dist/angular-timeline.js');
     require('angular-timeline/dist/angular-timeline.scss');
 
-    require('angular-scroll-animate/dist/angular-scroll-animate');
+    require('angular-inview/angular-inview')
 };

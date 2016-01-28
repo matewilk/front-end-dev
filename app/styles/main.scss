@@ -8,6 +8,22 @@
   background: linear-gradient(to right, #3F51B5 , #7986CB); /* Standard syntax */
 }
 
+.parent {
+
+    display: flex;
+    height: 100vh; /*buggy*/
+    /*
+    not working with  height: 100%;
+    working fine with height: 1000px;
+    */
+
+
+}
+
+.child {
+  overflow:auto;
+}
+
 .timeline-hidden {
   visibility: hidden;
 }

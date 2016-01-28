@@ -1,9 +1,9 @@
 <timeline>
-    <timeline-node ng-repeat="event in events" side="{{event.side}}">
-        <timeline-badge class="{{event.badgeClass}} timeline-hidden" when-visible="animateElementIn" when-not-visible="animateElementOut">
-            <i class="glyphicon {{event.badgeIconClass}}"></i>
+    <timeline-node ng-repeat="event in events" side="{{event.side | lowercase}}" >
+        <timeline-badge in-view="thisIsInView = $inview" ng-class="{ 'animated fadeIn{{event.side}}' :thisIsInView }" class="{{event.badgeClass}} md-whiteframe-z2">
+            <md-icon class="material-icons">{{event.badgeIconClass}}</md-icon>
         </timeline-badge>
-        <timeline-panel class="{{event.badgeClass}} timeline-hidden" when-visible="animateElementIn" when-not-visible="animateElementOut">
+        <timeline-panel in-view="thisIsInView = $inview" ng-class="{ 'animated fadeIn{{event.side}}':thisIsInView }" class="{{event.badgeClass}}">
             <timeline-heading>
                 <h4>{{event.title}}</h4>
             </timeline-heading>
