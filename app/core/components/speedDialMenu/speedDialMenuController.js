@@ -1,15 +1,15 @@
 'use strict';
-export function SpeedDialMenuController($scope, $timeout) {
+export function SpeedDialMenuController($scope, $timeout, $mdBottomSheet) {
+
+    // Speed Dial Menu (gt-xs)
     $scope.closeMenu = function () {
         $scope.controller.isOpen = false;
     };
-
     this.isOpen = false;
-    this.availableModes = ['md-fling', 'md-scale'];
+    //availableModes 'md-fling', 'md-scale';
     this.selectedMode = 'md-fling';
-    this.availableDirections = ['up', 'down', 'left', 'right'];
+    // availableDirections 'up', 'down', 'left', 'right';
     this.selectedDirection = 'left';
-
     this.tipDirection = 'bottom';
 
     $scope.$watch('controller.isOpen', function() {
@@ -17,4 +17,25 @@ export function SpeedDialMenuController($scope, $timeout) {
             $scope.controller.tooltipsVisible = $scope.controller.isOpen;
         }, 500);
     });
+
+    // Bottom Sheet Menu (xs)
+    $scope.items = [
+        { name: 'Hangout', icon: 'hangout' },
+        { name: 'Mail', icon: 'mail' },
+        { name: 'Message', icon: 'message' },
+        { name: 'Copy', icon: 'copy2' },
+        { name: 'Facebook', icon: 'facebook' },
+        { name: 'Twitter', icon: 'twitter' },
+    ];
+    $scope.listItemClick = function($index) {
+        var clickedItem = $scope.items[$index];
+        $mdBottomSheet.hide(clickedItem);
+    };
+    $scope.controller.isOpenBottom = false;
+    $scope.openBottomMenu = function() {
+        $mdBottomSheet.show({
+            template: require('./bottomSheetMenu.html')
+        });
+        $scope.controller.isOpenBottom = false;
+    };
 }

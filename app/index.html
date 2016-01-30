@@ -9,11 +9,11 @@
     <div ng-controller="MainCtrl" class="relative" layout-fill role="main">
         <md-toolbar lauout="row" class="md-whiteframe-z3 md-primary" style="position:fixed">
             <div class="md-toolbar-tools">
-
-                <md-button class="md-fab md-primary" aria-label="Curriculum vitae" ng-click="toggleLeft()" ng-hide="isOpenLeft()">
-                    <md-icon aria-label="Menu" class="material-icons">menu</md-icon>
-                </md-button>
                 <h3>Front End Dev</h3>
+                <md-button class="md-primary md-raised" aria-label="Curriculum vitae" ng-click="toggleLeft()" ng-hide="isOpenLeft()">
+                    <md-icon aria-label="Menu" class="material-icons">description</md-icon>
+                    Resume
+                </md-button>
                 <span flex> </span>
                 <speed-dial-menu></speed-dial-menu>
 
@@ -23,7 +23,7 @@
         <md-sidenav class="md-sidenav-left" layout="column" md-component-id="left" md-is-locked-open="false">
             <md-toolbar layout="row">
                 <div class="md-toolbar-tools">
-                    <h4>CV</h4>
+                    <h4>Interactive Resume</h4>
                     <!-- flex for right alignment of the rest of items in toolbar-->
                     <span flex> </span>
                     <md-button class="md-raised md-accent"><md-icon class="material-icons">system_update_alt</md-icon> PDF</md-button>

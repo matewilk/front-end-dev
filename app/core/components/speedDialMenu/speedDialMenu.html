@@ -1,5 +1,5 @@
 <div style="position:absolute; right:0">
-    <md-fab-speed-dial md-open="controller.isOpen" md-direction="left" ng-class="controller.selectedMode" >
+    <md-fab-speed-dial hide-xs md-open="controller.isOpen" md-direction="{{controller.selectedDirection}}" ng-class="controller.selectedMode" >
         <md-fab-trigger>
             <md-button aria-label="menu" class="md-fab md-accent">
                 <md-icon aria-label="Menu" class="material-icons">menu</md-icon>
@@ -7,18 +7,26 @@
             </md-button>
         </md-fab-trigger>
         <md-fab-actions>
-            <md-button aria-label="About" class="md-fab md-raised" href="#section-main" du-smooth-scroll du-scrollspy offseet="70" ng-click='closeMenu()'>
+            <md-button aria-label="About" class="md-fab md-raised button-medium" href="#section-main" du-smooth-scroll du-scrollspy offseet="70" ng-click='closeMenu()'>
                 <md-tooltip md-direction="controller.tipDirection" md-visible="controller.tooltipsVisible">About</md-tooltip>
-                <md-icon md-svg-src="img/icons/twitter.svg" aria-label="Twitter"></md-icon>
+                <md-icon class="material-icons" aria-label="About">account_circle</md-icon>
             </md-button>
-            <md-button aria-label="Experience" class="md-fab md-raised" href="#section-2" du-smooth-scroll du-scrollspy offset="70" ng-click='closeMenu()'>
+            <md-button aria-label="Experience" class="md-fab md-raised button-medium" href="#section-2" du-smooth-scroll du-scrollspy offset="70" ng-click='closeMenu()'>
                 <md-tooltip md-direction="top" md-visible="controller.tooltipsVisible">Experience</md-tooltip>
-                <md-icon md-svg-src="img/icons/facebook.svg" aria-label="Facebook"></md-icon>
+                <md-icon class="material-icons" aria-label="Experience">lightbulb_outline</md-icon>
             </md-button>
-            <md-button aria-label="Contact" class="md-fab md-raised" href="#section-3" du-smooth-scroll du-scrollspy offset="70" ng-click='closeMenu()'>
+            <md-button aria-label="Contact" class="md-fab md-raised button-medium" href="#section-3" du-smooth-scroll du-scrollspy offset="70" ng-click='closeMenu()'>
                 <md-tooltip md-direction="controller.tipDirection" md-visible="controller.tooltipsVisible">Contact</md-tooltip>
-                <md-icon md-svg-src="img/icons/hangout.svg" aria-label="Google Hangout"></md-icon>
+                <md-icon class="material-icons" aria-label="Contact">contact_mail</md-icon>
             </md-button>
         </md-fab-actions>
+    </md-fab-speed-dial>
+
+    <md-fab-speed-dial hide-gt-xs ng-click="openBottomMenu()" md-direction="{{controller.selectedDirection}}" ng-class="controller.selectedMode" >
+        <md-fab-trigger>
+            <md-button aria-label="menu" class="md-fab md-accent">
+                <md-icon aria-label="Menu" class="material-icons">menu</md-icon>
+            </md-button>
+        </md-fab-trigger>
     </md-fab-speed-dial>
 </div>

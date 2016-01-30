@@ -1,9 +1,9 @@
 module.exports = function () {
     /* STYLES */
     require('../../node_modules/angular-material/angular-material.scss');
-    require('../styles/main.scss');
     /* Material Design Icons */
     require('../../node_modules/material-design-icons/iconfont/material-icons.css');
+    require('../styles/main.scss');
     /* JS */
     require('angular');
     require('angular-route');

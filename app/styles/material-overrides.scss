@@ -1,0 +1,20 @@
+#resume-container {
+  max-width: 80%;
+  width: 80%;
+  overflow-x: hidden;
+
+  md-content {
+    overflow-x: hidden
+  }
+}
+
+.button-medium {
+  width: 50px !important;
+  height: 50px !important;
+  line-height: 50px !important;
+
+  md-icon {
+    color: rgba(0,0,0,0.54) !important;
+    font-size: 36px !important;
+  }
+}
