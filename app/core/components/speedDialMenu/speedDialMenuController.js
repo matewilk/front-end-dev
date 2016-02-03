@@ -27,15 +27,4 @@ export function SpeedDialMenuController($scope, $timeout, $mdBottomSheet) {
         { name: 'Facebook', icon: 'facebook' },
         { name: 'Twitter', icon: 'twitter' },
     ];
-    $scope.listItemClick = function($index) {
-        var clickedItem = $scope.items[$index];
-        $mdBottomSheet.hide(clickedItem);
-    };
-    $scope.controller.isOpenBottom = false;
-    $scope.openBottomMenu = function() {
-        $mdBottomSheet.show({
-            template: require('./bottomSheetMenu.html')
-        });
-        $scope.controller.isOpenBottom = false;
-    };
 }

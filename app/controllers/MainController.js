@@ -1,5 +1,5 @@
 'use strict';
-export function mainController($scope, $mdSidenav, $log, $timeout)
+export function mainController($scope, $mdSidenav, $log, $timeout, $mdBottomSheet, $document)
     {
         $scope.toggleLeft = buildToggler('left');
         $scope.isOpenLeft = function(){

@@ -1,6 +1,8 @@
 'use strict';
 
 import {mainController} from './controllers/MainController'
+import {bottomSheetController} from './controllers/BottomSheetController'
+import {mobileController} from './controllers/MobileController'
 import {speedDialMenu} from './core/components/speedDialMenu/speedDialMenuDirective'
 
 module.exports = angular.module('app',[
@@ -25,4 +27,6 @@ module.exports = angular.module('app',[
 
 })
 .controller('MainCtrl', mainController)
+.controller('BottomSheetController', bottomSheetController)
+.controller('MobileController', mobileController)
 .directive('speedDialMenu', speedDialMenu);

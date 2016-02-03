@@ -22,11 +22,13 @@
         </md-fab-actions>
     </md-fab-speed-dial>
 
-    <md-fab-speed-dial hide-gt-xs ng-click="openBottomMenu()" md-direction="{{controller.selectedDirection}}" ng-class="controller.selectedMode" >
-        <md-fab-trigger>
-            <md-button aria-label="menu" class="md-fab md-accent">
-                <md-icon aria-label="Menu" class="material-icons">menu</md-icon>
-            </md-button>
-        </md-fab-trigger>
-    </md-fab-speed-dial>
+    <div ng-controller="MobileController">
+        <md-fab-speed-dial  hide-gt-xs ng-click="openBottomMenu($event)" >
+            <md-fab-trigger>
+                <md-button aria-label="menu" class="md-fab md-accent">
+                    <md-icon aria-label="Menu" class="material-icons">menu</md-icon>
+                </md-button>
+            </md-fab-trigger>
+        </md-fab-speed-dial>
+    </div>
 </div>

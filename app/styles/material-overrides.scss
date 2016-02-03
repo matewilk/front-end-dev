@@ -1,12 +1,19 @@
 #resume-container {
   max-width: 80%;
   width: 80%;
-  overflow-x: hidden;
 
+  //prevent from showing scrollbar on animation
   md-content {
     overflow-x: hidden
   }
 }
+
+md-bottom-sheet {
+    position: fixed !important;
+}
+
+.bottom-bar { position: fixed; bottom: 0; height: 100%; width: 100% }
+
 
 .button-medium {
   width: 50px !important;
