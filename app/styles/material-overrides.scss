@@ -10,10 +10,31 @@
 
 md-bottom-sheet {
     position: fixed !important;
+
+    md-list-item {
+        a {
+            padding-bottom: 10px !important;
+            padding-top: 10px !important;
+            min-width: 100px !important;
+        }
+    }
 }
 
-.bottom-bar { position: fixed; bottom: 0; height: 100%; width: 100% }
+.active {
+    background-color: rgb(255,64,129) !important;
+    md-icon {
+        color: white !important;
+    }
+    span {
+        color: white !important;
+    }
+}
 
+.active.button-medium {
+    md-icon {
+        color: white !important;
+    }
+}
 
 .button-medium {
   width: 50px !important;
@@ -24,4 +45,10 @@ md-bottom-sheet {
     color: rgba(0,0,0,0.54) !important;
     font-size: 36px !important;
   }
+}
+
+//fix for speed dial menu while resizing from mobile to desktop
+.md-scale:not(.md-is-open) .md-fab-action-item {
+    opacity: 0;
+    transform: scale(0);
 }

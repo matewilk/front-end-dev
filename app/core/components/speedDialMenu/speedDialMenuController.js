@@ -7,7 +7,7 @@ export function SpeedDialMenuController($scope, $timeout, $mdBottomSheet) {
     };
     this.isOpen = false;
     //availableModes 'md-fling', 'md-scale';
-    this.selectedMode = 'md-fling';
+    this.selectedMode = 'md-scale';
     // availableDirections 'up', 'down', 'left', 'right';
     this.selectedDirection = 'left';
     this.tipDirection = 'bottom';
@@ -17,14 +17,4 @@ export function SpeedDialMenuController($scope, $timeout, $mdBottomSheet) {
             $scope.controller.tooltipsVisible = $scope.controller.isOpen;
         }, 500);
     });
-
-    // Bottom Sheet Menu (xs)
-    $scope.items = [
-        { name: 'Hangout', icon: 'hangout' },
-        { name: 'Mail', icon: 'mail' },
-        { name: 'Message', icon: 'message' },
-        { name: 'Copy', icon: 'copy2' },
-        { name: 'Facebook', icon: 'facebook' },
-        { name: 'Twitter', icon: 'twitter' },
-    ];
 }

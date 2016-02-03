@@ -1,12 +1,12 @@
 <div style="position:absolute; right:0">
-    <md-fab-speed-dial hide-xs md-open="controller.isOpen" md-direction="{{controller.selectedDirection}}" ng-class="controller.selectedMode" >
+    <md-fab-speed-dial hide-xs md-open="controller.isOpen" md-direction="{{controller.selectedDirection}}" ng-class="controller.selectedMode" ng-cloak>
         <md-fab-trigger>
             <md-button aria-label="menu" class="md-fab md-accent">
                 <md-icon aria-label="Menu" class="material-icons">menu</md-icon>
                 <md-tooltip md-direction="top">Menu</md-tooltip>
             </md-button>
         </md-fab-trigger>
-        <md-fab-actions>
+        <md-fab-actions du-spy-context>
             <md-button aria-label="About" class="md-fab md-raised button-medium" href="#section-main" du-smooth-scroll du-scrollspy offseet="70" ng-click='closeMenu()'>
                 <md-tooltip md-direction="controller.tipDirection" md-visible="controller.tooltipsVisible">About</md-tooltip>
                 <md-icon class="material-icons" aria-label="About">account_circle</md-icon>
