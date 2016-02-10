@@ -7,7 +7,9 @@
             <timeline-heading>
                 <h4>{{event.title}}</h4>
             </timeline-heading>
-            <p>{{event.content}}</p>
+            <div ng-repeat="content in event.content">
+                <p>{{content}}</p>
+            </div>
         </timeline-panel>
     </timeline-node>
 </timeline>

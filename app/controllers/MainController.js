@@ -46,48 +46,119 @@ export function mainController($scope, $mdSidenav, $log, $timeout, $mdBottomShee
 	$scope.side = '';
 
 	$scope.events = [{
+		badgeClass: 'warning',
+        side: 'Right',
+		badgeIconClass: 'place',
+		title: 'Senior Web Developer',
+		when: '2016',
+		content: [
+            'Figure out something goooooood!'
+        ],
+        tools: 'Latest toooools!!'
+	},{
+		badgeClass: 'warning',
+        side: 'Left',
+		badgeIconClass: 'place',
+		title: 'Web Developer',
+		when: '2014-2015',
+		content: [
+            'Figure out something goooooood!'
+        ],
+        tools: 'Latest toooools!!'
+	},{
 		badgeClass: 'info',
         side: 'Right',
 		badgeIconClass: 'assignment_ind',
-		title: 'First heading',
-		when: '11 hours ago via Twitter',
-		content: 'Some awesome content.'
+		title: 'Software Developer',
+		when: '2013-2014',
+		content: [
+            'Student benchmarking, analytics, and Management Information Systems for schools development',
+            'GUI implementation',
+            'Responsive components development'
+        ],
+        tools: 'Javascript, ExtJs, PHP, Zend Framework'
+	},{
+		badgeClass: 'warning',
+        side: 'Left',
+		badgeIconClass: 'place',
+		title: 'Web/Javascript Developer',
+		when: '2010-2013',
+		content: [
+            'Development, modifications and new functionality implementation in Javascript based CRM',
+            'Call center system development',
+            'Front-end components implementation',
+            'User interface desing & usability design',
+            'Data visualization',
+            'GUI implementation',
+            'Application architecture implementation',
+            'Back-end and SQL development',
+            'Full responsibility over one of the main company\'s products'
+        ],
+        tools: 'Javascript, ExtJs, jQuery, css, html, PHP, Zend Framework, DbDesigner, PostgreSQL'
+	},{
+		badgeClass: 'info',
+        side: 'Right',
+		badgeIconClass: 'assignment_ind',
+		title: 'Programmer Javascript/PHP/SQL',
+		when: '2009-2010',
+		content: [
+            'Vehicle monitoring, controll and localization application development',
+            'GUI implementation',
+            'Application architecture implementation',
+            'Database design assistance',
+            'Writing SQL queries and procedures'
+        ],
+        tools: 'Javascript, ExtJs, Ajax, PHP, Zend Framework, DbDesigner, PostgreSQL'
 	}, {
 		badgeClass: 'warning',
         side: 'Left',
 		badgeIconClass: 'place',
-		title: 'Second heading',
-		when: '12 hours ago via Twitter',
-		content: 'More awesome content.'
-	}, {
-		badgeClass: 'default',
-        side: 'Right',
-		badgeIconClass: 'local_library',
-		title: 'Third heading',
-		titleContentHtml: '<img class="img-responsive" src="http://www.freeimages.com/assets/183333/1833326510/wood-weel-1444183-m.jpg">',
-		contentHtml: lorem,
-		footerContentHtml: '<a href="">Continue Reading</a>'
+		title: 'Freelancer Web enthusiast',
+		when: '2008-2009',
+		content: [
+            'Web services functionality development and modification',
+            'Templates and forms creation',
+            'Scripting',
+            'Web pages development',
+            'Web shops modification'
+        ],
+        tools: 'PHP, HTML, CSS, JavaScript'
 	}, {
 		badgeClass: 'warning',
+        side: 'Right',
+		badgeIconClass: 'school',
+		title: 'Master of Science',
+		when: '2009',
+		content: ['Mail client with artifical inteligence adaptive anti spam filtering algorithm']
+	}, {
+		badgeClass: 'info',
         side: 'Left',
-		badgeIconClass: 'event_note',
-		title: 'Second heading',
-		when: '12 hours ago via Twitter',
-		content: 'More awesome content.'
+		badgeIconClass: 'star',
+		title: 'IT intern at Inoxpa Spain',
+		when: '2007-2008',
+		content: [
+            'Share Point Services 3.0 implementation and server administration',
+            'Users intervies and UML diagrams development',
+            'System requirements analysis'
+        ],
+        tools: 'Visual Studio .NET, Microsoft Windows Server 2005, Miscrosoft Web Developer'
 	}, {
 		badgeClass: 'info',
         side: 'Right',
 		badgeIconClass: 'star',
-		title: 'Second heading',
-		when: '12 hours ago via Twitter',
-		content: 'More awesome content.'
+		title: 'Scholarship at Universitat de Girona',
+		when: '2007-2008',
+		content: ['Faculty of Information and Computer Science']
 	}, {
 		badgeClass: 'warning',
         side: 'Left',
-		badgeIconClass: 'person_outline',
-		title: 'Second heading',
-		when: '12 hours ago via Twitter',
-		content: 'More awesome content.'
+		badgeIconClass: 'school',
+		title: 'Techical University of Lodz',
+		when: '2003',
+		content: [
+            'Faculty of Electrical, Electronic, Computer and Control Engineering.',
+            'Member of Microprocessor Autonomous Systems Academic Club - MIPSA.'
+        ]
 	}];
 
 	$scope.addEvent = function() {
