@@ -50,39 +50,81 @@ export function mainController($scope, $mdSidenav, $log, $timeout, $mdBottomShee
         side: 'Right',
 		badgeIconClass: 'place',
 		title: 'Senior Web Developer',
-		when: '2016',
+        company: 'BBC',
+		when: '2016 - present',
 		content: [
             'Figure out something goooooood!'
         ],
-        tools: 'Latest toooools!!'
+        tools: 'Latest toooools!!',
+        toolsIcon: 'developer_mode'
+	},{
+		badgeClass: 'warning',
+        side: 'Left',
+		badgeIconClass: 'place',
+		title: 'Courses',
+        company: 'BBC',
+		when: '2014 - 2016',
+		content: [
+            'Code Reviews',
+            'Continuous Integration',
+            'Pair Programming',
+            'Behavioral Driven Development',
+            'Test Driven Development',
+            'HTML5 for Mobile and Web',
+            'Microservices'
+        ],
+        tools: 'Latest toooools!!',
+        toolsIcon: 'laptop_mac'
+	},{
+		badgeClass: 'warning',
+        side: 'Right',
+		badgeIconClass: 'place',
+		title: 'Independent Coursework and Conferences',
+		when: '2014 - 2015',
+		content: [
+            'AWS:reInvent 2015 conference Las Vegas',
+            'MongoDB for Node.js Developers',
+            'Node.js meet-ups',
+            'React.js meet-ups',
+            'Backbone.js meet-ups',
+            'Meet.js meet-ups',
+            'Front-Trends 2013 & 2014 conference'
+        ],
+        tools: 'Latest toooools!!',
+        toolsIcon: 'videogame_asset'
 	},{
 		badgeClass: 'warning',
         side: 'Left',
 		badgeIconClass: 'place',
 		title: 'Web Developer',
-		when: '2014-2015',
+        company: 'BBC',
+		when: '2014 - 2015',
 		content: [
             'Figure out something goooooood!'
         ],
-        tools: 'Latest toooools!!'
+        tools: 'Latest toooools!!',
+        toolsIcon: 'keyboard'
 	},{
 		badgeClass: 'info',
         side: 'Right',
 		badgeIconClass: 'assignment_ind',
 		title: 'Software Developer',
-		when: '2013-2014',
+        company: 'Arbor Education',
+		when: '2013 - 2014',
 		content: [
             'Student benchmarking, analytics, and Management Information Systems for schools development',
             'GUI implementation',
             'Responsive components development'
         ],
-        tools: 'Javascript, ExtJs, PHP, Zend Framework'
+        tools: 'Javascript, ExtJs, PHP, Zend Framework',
+        toolsIcon: 'mouse'
 	},{
 		badgeClass: 'warning',
         side: 'Left',
 		badgeIconClass: 'place',
 		title: 'Web/Javascript Developer',
-		when: '2010-2013',
+        company: 'Focus Telecom',
+		when: '2010 - 2013',
 		content: [
             'Development, modifications and new functionality implementation in Javascript based CRM',
             'Call center system development',
@@ -94,13 +136,15 @@ export function mainController($scope, $mdSidenav, $log, $timeout, $mdBottomShee
             'Back-end and SQL development',
             'Full responsibility over one of the main company\'s products'
         ],
-        tools: 'Javascript, ExtJs, jQuery, css, html, PHP, Zend Framework, DbDesigner, PostgreSQL'
+        tools: 'Javascript, ExtJs, jQuery, css, html, PHP, Zend Framework, DbDesigner, PostgreSQL',
+        toolsIcon: 'developer_mode'
 	},{
 		badgeClass: 'info',
         side: 'Right',
 		badgeIconClass: 'assignment_ind',
 		title: 'Programmer Javascript/PHP/SQL',
-		when: '2009-2010',
+        company: 'Expanse',
+		when: '2009 - 2010',
 		content: [
             'Vehicle monitoring, controll and localization application development',
             'GUI implementation',
@@ -108,13 +152,14 @@ export function mainController($scope, $mdSidenav, $log, $timeout, $mdBottomShee
             'Database design assistance',
             'Writing SQL queries and procedures'
         ],
-        tools: 'Javascript, ExtJs, Ajax, PHP, Zend Framework, DbDesigner, PostgreSQL'
+        tools: 'Javascript, ExtJs, Ajax, PHP, Zend Framework, DbDesigner, PostgreSQL',
+        toolsIcon: 'keyboard'
 	}, {
 		badgeClass: 'warning',
         side: 'Left',
 		badgeIconClass: 'place',
 		title: 'Freelancer Web enthusiast',
-		when: '2008-2009',
+		when: '2008 - 2009',
 		content: [
             'Web services functionality development and modification',
             'Templates and forms creation',
@@ -122,39 +167,45 @@ export function mainController($scope, $mdSidenav, $log, $timeout, $mdBottomShee
             'Web pages development',
             'Web shops modification'
         ],
-        tools: 'PHP, HTML, CSS, JavaScript'
+        tools: 'PHP, HTML, CSS, JavaScript',
+        toolsIcon: 'videogame_asset'
 	}, {
 		badgeClass: 'warning',
         side: 'Right',
 		badgeIconClass: 'school',
 		title: 'Master of Science',
 		when: '2009',
-		content: ['Mail client with artifical inteligence adaptive anti spam filtering algorithm']
+		content: ['Mail client with artifical inteligence adaptive anti spam filtering algorithm'],
+        tools: 'Javascript, PHP, SQL',
+        toolsIcon: 'memory'
 	}, {
 		badgeClass: 'info',
         side: 'Left',
 		badgeIconClass: 'star',
-		title: 'IT intern at Inoxpa Spain',
-		when: '2007-2008',
+		title: 'IT intern',
+        company: 'Inoxpa Spain',
+		when: '2007 - 2008',
 		content: [
             'Share Point Services 3.0 implementation and server administration',
             'Users intervies and UML diagrams development',
             'System requirements analysis'
         ],
-        tools: 'Visual Studio .NET, Microsoft Windows Server 2005, Miscrosoft Web Developer'
+        tools: 'Visual Studio .NET, Microsoft Windows Server 2005, Miscrosoft Web Developer',
+        toolsIcon: 'developer_board'
 	}, {
 		badgeClass: 'info',
         side: 'Right',
-		badgeIconClass: 'star',
-		title: 'Scholarship at Universitat de Girona',
-		when: '2007-2008',
+		badgeIconClass: 'public',
+		title: 'IAESTE Scholarship program',
+        company: 'Universitat de Girona',
+		when: '2007 - 2008',
 		content: ['Faculty of Information and Computer Science']
 	}, {
 		badgeClass: 'warning',
         side: 'Left',
 		badgeIconClass: 'school',
 		title: 'Techical University of Lodz',
-		when: '2003',
+		when: '2003 - 2009',
 		content: [
             'Faculty of Electrical, Electronic, Computer and Control Engineering.',
             'Member of Microprocessor Autonomous Systems Academic Club - MIPSA.'
