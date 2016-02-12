@@ -1,5 +1,5 @@
 'use strict';
-export function mainController($scope, $mdSidenav, $log, $timeout, $mdBottomSheet, $document)
+export function mainController($scope, $mdSidenav, $log, $timeout, $mdBottomSheet, $document, $mdMedia, $mdDialog)
     {
         $scope.toggleLeft = buildToggler('left');
         $scope.isOpenLeft = function(){
@@ -37,11 +37,27 @@ export function mainController($scope, $mdSidenav, $log, $timeout, $mdBottomShee
             }
         }, true);
 
-        var lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. " +
-		          "Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor." +
-		          "Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, " +
-		          "ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor." +
-		          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
+        $scope.showAdvanced = function(ev) {
+            var useFullScreen = ($mdMedia('sm') || $mdMedia('xs'));
+            $mdDialog.show({
+                  controller: 'ResumeDialogController',
+                  template: require('./resumeDialog.html'),
+                  parent: angular.element(document.body),
+                  targetEvent: ev,
+                  clickOutsideToClose:true,
+                  fullscreen: useFullScreen
+            })
+            .then(function(answer) {
+                $scope.status = 'You said the information was "' + answer + '".';
+            }, function() {
+                $scope.status = 'You cancelled the dialog.';
+            });
+            $scope.$watch(function() {
+                return $mdMedia('xs') || $mdMedia('sm');
+            }, function(wantsFullScreen) {
+                $scope.customFullscreen = (wantsFullScreen === true);
+            });
+        };
 
 	$scope.side = '';
 
@@ -53,9 +69,29 @@ export function mainController($scope, $mdSidenav, $log, $timeout, $mdBottomShee
         company: 'BBC',
 		when: '2016 - present',
 		content: [
-            'Figure out something goooooood!'
+            'Creating prototype and developing award winning BBC\'s Authentication Tool app.',
+            'Creating prototype and taking active part in designing responsive version of BBC\'s CMS (iSite2)',
+            'Developing responsive components and delivering new functionalities for the product (iSite2)',
+            'Collaborating with other BBC\'s teams to ensure best product functionality and compatibility',
+
+            'Advising the Product Manager or Technical Project Manager to ensure that all technical possibilities are explored and that products achieve the best possible look, feel and functionality',
+            'Evaluating time needed to develop certain features and developing the features in a given timescale',
+            'Suggesting and using solutions and libraries to shorten development time and/or effort',
+            'Advise on strategic technology issues',
+            'Assistance with recruitment',
+            'Mentoring and coaching of less experienced members of the team',
+            'Developing new features and products for the organisation',
+            'Redesigning existing functionality using proven development methodologies, processes and patterns along with the latest technology',
+            'Estimating Stories (Agile Scrum) development time, breaking them down into tasks and making sure they are delivered in a given timeframe (Sprint) - panning and prioritizing tasks',
+            'Resolving accessibility, usability and cross browser issues',
+            'Working with 3rd party products/libraries'
         ],
-        tools: 'Latest toooools!!',
+        long: true,
+        tools: 'Plain Javascript, React.js, Node.js, Backbone.js, Require.js, Express.js, ES6, ' +
+        'Sass, Bootstrap, Angular-Material, ' +
+        'Behat, PhpUnit, Mocha, Chai, Sinon, Jasmine, ' +
+        'Hudson, Heroku, AWS, Jenkins, AWS CodeDeploy and CodePipeline, ' +
+        'Bower, Grunt, Vagrant, Webpack, Require, Yeoman, Jshint, JsLint, JsBin, Js minifiers and more ...',
         toolsIcon: 'developer_mode'
 	},{
 		badgeClass: 'warning',
@@ -71,10 +107,9 @@ export function mainController($scope, $mdSidenav, $log, $timeout, $mdBottomShee
             'Behavioral Driven Development',
             'Test Driven Development',
             'HTML5 for Mobile and Web',
-            'Microservices'
-        ],
-        tools: 'Latest toooools!!',
-        toolsIcon: 'laptop_mac'
+            'Microservices',
+            'Agile Scrum'
+        ]
 	},{
 		badgeClass: 'warning',
         side: 'Right',
@@ -89,9 +124,7 @@ export function mainController($scope, $mdSidenav, $log, $timeout, $mdBottomShee
             'Backbone.js meet-ups',
             'Meet.js meet-ups',
             'Front-Trends 2013 & 2014 conference'
-        ],
-        tools: 'Latest toooools!!',
-        toolsIcon: 'videogame_asset'
+        ]
 	},{
 		badgeClass: 'warning',
         side: 'Left',
@@ -100,9 +133,15 @@ export function mainController($scope, $mdSidenav, $log, $timeout, $mdBottomShee
         company: 'BBC',
 		when: '2014 - 2015',
 		content: [
-            'Figure out something goooooood!'
+            'Front-end development of BBC\'s CMS (iSite2) used by Programmes, Sport, Blogs, Children in Need, Learning English and other BBC pages',
+            'Developing new functionalities and modifying existing ones',
+            'Improving code modularity, usability and testability',
+            'Rewriting legacy code using latest technologies into more maintanable modules',
+            'Moving logic from back to front-end',
+            'Code reviews',
+            'Pair programming'
         ],
-        tools: 'Latest toooools!!',
+        tools: 'React.js, Node.js, Backbone.js, Require.js, Express.js, Jasmine.js, Hudson, Grunt, Zend Framework, Bootstrap',
         toolsIcon: 'keyboard'
 	},{
 		badgeClass: 'info',
