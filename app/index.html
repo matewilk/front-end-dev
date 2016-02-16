@@ -6,15 +6,16 @@
 </head>
 <body ng-cloak layout="column">
     <div ng-controller="MainCtrl" class="relative" layout-fill role="main">
-        <md-toolbar class="md-whiteframe-z3 md-primary" style="position:fixed">
+        <md-toolbar lauout="row" class="md-whiteframe-z3 md-primary" style="position:fixed">
             <div class="md-toolbar-tools">
                 <h3>Front End Dev</h3>
-                <span flex> </span>
-                <md-button id="resume-button" class="md-primary md-raised" aria-label="Curriculum vitae" ng-click="toggleLeft()">
+                <md-button class="md-primary md-raised" aria-label="Curriculum vitae" ng-click="toggleLeft()" ng-hide="isOpenLeft()">
                     <md-icon aria-label="Menu" class="material-icons">description</md-icon>
                     Resume
                 </md-button>
+                <span flex> </span>
                 <speed-dial-menu></speed-dial-menu>
+
             </div>
         </md-toolbar>
 
@@ -50,7 +51,6 @@
             </div>
         </footer>
     </div>
-
     <script src="bundle.js"></script>
 </body>
 </html>
