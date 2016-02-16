@@ -51,3 +51,7 @@ md-checkbox.md-checked[disabled].red .md-icon {
     opacity: 0;
     transform: scale(0);
 }
+
+#current-role md-input-container .md-input[disabled]{
+    color: rgba(0,0,0,0.85);
+}
