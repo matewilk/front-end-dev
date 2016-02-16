@@ -16,8 +16,5 @@ export function SpeedDialMenuController($scope, $timeout, $mdBottomSheet) {
         $timeout(function() {
             $scope.controller.tooltipsVisible = $scope.controller.isOpen;
         }, 500);
-
-        var button = angular.element(document.querySelector('#resume-button'));
-        button.toggleClass('md-primary').toggleClass('md-accent');
     });
 }

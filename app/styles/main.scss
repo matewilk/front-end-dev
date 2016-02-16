@@ -33,25 +33,3 @@ section img {
     }
   }
 }
-
-@media (min-width: 600px) {
-    #speed-dial-desktop {
-        top: 26px;
-    }
-
-    #resume-button {
-        right: 80px;
-    }
-}
-
-@media (min-width: 742px) {
-    #speed-dial-desktop {
-        top: 20px;
-    }
-}
-
-@media (min-width: 960px) {
-    #speed-dial-desktop {
-        top: 36px;
-    }
-}

@@ -7,11 +7,18 @@ export function mainController($scope, $mdSidenav, $log, $timeout, $mdBottomShee
         };
         $scope.close = function () {
             $mdSidenav('left').close()
+                .then(function () {
+                    $log.debug("close RIGHT is done");
+                });
         };
 
         function buildToggler(navID) {
             return function() {
-                $mdSidenav(navID).toggle()
+                $mdSidenav(navID)
+                    .toggle()
+                    .then(function () {
+                        $log.debug("toggle " + navID + " is done");
+                    });
             }
         }
 
@@ -24,9 +31,9 @@ export function mainController($scope, $mdSidenav, $log, $timeout, $mdBottomShee
         $scope.$watch('skills', function(newVal, oldVal){
             //can't refer to the oldVal as it will create infinite loop
             $scope.skills = {
-                javascript: 85,
-                html: 80,
-                css: 80
+                javascript: 80,
+                html: 75,
+                css: 75
             }
         }, true);
 
