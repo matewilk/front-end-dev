@@ -1,9 +1,21 @@
 'use strict';
-export function contactController($scope)
+export function contactController($scope, $http)
 {
     $scope.submit = function() {
-      // submit code goes here
+      $http({
+          method: 'POST',
+          url: '/test',
+          data: $scope.contact,
+          headers: { 'Content-Type': 'application/json' }
+      })
+      .success(function(data) {
+          console.log('success');
+      })
+      .error(function(data) {
+          console.log('error');
+      });
     };
+
     $scope.reset = function() {
       $scope.contact = {
         name: "",
