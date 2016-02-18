@@ -7,16 +7,13 @@ module.exports = function () {
     /* JS */
     require('angular');
     require('angular-route');
-    //for angular-material
     require('angular-animate');
     require('angular-aria');
     require('angular-material');
-
     require('angular-scroll');
     require('angular-touch');
-
     require('angular-timeline/dist/angular-timeline.js');
     require('angular-timeline/dist/angular-timeline.scss');
-
     require('angular-inview/angular-inview')
+    require('angular-messages')
 };

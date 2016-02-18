@@ -1,10 +1,11 @@
 'use strict';
 
-import {mainController} from './controllers/MainController'
-import {bottomSheetController} from './controllers/BottomSheetController'
-import {mobileController} from './controllers/MobileController'
-import {resumeDialogController} from './controllers/ResumeDialogController'
-import {speedDialMenu} from './core/components/speedDialMenu/speedDialMenuDirective'
+import {mainController} from './controllers/MainController';
+import {bottomSheetController} from './controllers/BottomSheetController';
+import {mobileController} from './controllers/MobileController';
+import {resumeDialogController} from './controllers/ResumeDialogController';
+import {speedDialMenu} from './core/components/speedDialMenu/speedDialMenuDirective';
+import {contactController} from './controllers/ContactController';
 
 module.exports = angular.module('app',[
     'duScroll',
@@ -12,7 +13,8 @@ module.exports = angular.module('app',[
     'ngMaterial',
     'ngRoute',
     'angular-timeline',
-    'angular-inview'
+    'angular-inview',
+    'ngMessages'
 ])
 .config(function ($routeProvider, $locationProvider) {
     $routeProvider
@@ -31,4 +33,5 @@ module.exports = angular.module('app',[
 .controller('BottomSheetController', bottomSheetController)
 .controller('MobileController', mobileController)
 .controller('ResumeDialogController', resumeDialogController)
+.controller('ContactController', contactController)
 .directive('speedDialMenu', speedDialMenu);
