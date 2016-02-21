@@ -4,8 +4,7 @@
   "description": "My Web Site",
   "main": "main.js",
   "scripts": {
-    "start": "webpack-dev-server --content-base app --hot",
-    "test": "test"
+    "start": "webpack-dev-server --content-base app --hot"
   },
   "author": "Mateusz Wilk <matewilk@gmail.com>",
   "license": "ISC",
