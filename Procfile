@@ -1,1 +1,1 @@
-web: npm install && npm start
+web: NODE_ENV=development && npm install && npm start
