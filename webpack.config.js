@@ -7,7 +7,11 @@ var APP = __dirname + '/app';
 module.exports = {
     context: APP,
     entry: {
-        app: ['webpack/hot/dev-server', './core/bootstrap.js']
+        app: [
+            'webpack-dev-server/client?http://127.0.0.1:8080',
+            'webpack/hot/only-dev-server',
+            './core/bootstrap.js'
+        ]
     },
     module: {
         loaders: [
@@ -47,6 +51,12 @@ module.exports = {
     plugins: [
         new webpack.HotModuleReplacementPlugin()
     ],
+    devServer: {
+        hot:true,
+        proxy: {
+            "/api/*": "http://localhost:3000"
+        },
+    },
     output: {
         path: APP,
         filename: 'bundle.js'
