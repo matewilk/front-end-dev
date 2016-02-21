@@ -6,7 +6,7 @@ var http = require('http'),
     send = require('./sendwithmailer');
 
     hostname = 'localhost',
-    port = 3000;
+    port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 
